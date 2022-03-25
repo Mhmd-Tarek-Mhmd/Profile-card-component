@@ -5,6 +5,98 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profile card component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        min-height: 100vh;
+        align-items: center;
+        justify-content: center;
+        background: url(images/bg-pattern-top.svg) no-repeat bottom 50vh right
+            40vw,
+          url(images/bg-pattern-bottom.svg) no-repeat top 40vh left 50vw,
+          hsl(185, 75%, 39%);
+      }
+      .card {
+        display: grid;
+        font-size: 18px;
+        max-width: 100%;
+        min-width: 326px;
+        position: relative;
+        text-align: center;
+        border-radius: 16px;
+        background-color: white;
+        color: hsl(227, 10%, 46%);
+        font-family: "Kumbh Sans", sans-serif;
+        grid-template-rows: 140px 145px 90px;
+        grid-template-columns: minmax(0, 326px);
+      }
+      @media (min-width: 767px) {
+        body {
+          background-position: bottom 40vh right 50vw, top 60vh left 45vw;
+        }
+        .card {
+          grid-template-columns: 350px;
+        }
+      }
+      .card h1,
+      .card strong {
+        margin: 0;
+        font-size: inherit;
+        color: hsl(229, 23%, 23%);
+      }
+      .card-top {
+        background-size: cover;
+        border-radius: 16px 16px 0 0;
+        background-image: url(images/bg-pattern-card.svg);
+      }
+      .card-image {
+        top: 87px;
+        left: 50%;
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
+        position: absolute;
+        border-radius: 50%;
+        box-sizing: border-box;
+        border: 4px solid white;
+        transform: translateX(-50%);
+      }
+      .card-body {
+        align-self: end;
+      }
+      .card-body p {
+        font-size: 14px;
+        margin: 7px 0 24px;
+      }
+      .card-body > div,
+      .card-footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .card-body > div {
+        gap: 10px;
+      }
+      .card-footer {
+        gap: 42px;
+        border-radius: 0 0 16px 16px;
+        border-top: 1px solid hsla(0, 0%, 59%, 40%);
+      }
+      .card-footer span {
+        display: block;
+        font-size: 10px;
+        margin-top: 3px;
+        letter-spacing: 1px;
+      }
+    </style>
   </head>
   <body>
     <main>
